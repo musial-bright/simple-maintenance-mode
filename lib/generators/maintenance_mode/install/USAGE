@@ -1,0 +1,22 @@
+Description:
+  Install maintenance mode for your applications.
+  The installation will copy migrations and pages into your migrations/public
+  rails app folder.
+
+  What you have to do:
+    - Put the check_maintenance_mode filter in your application_controller.rb
+    - Integrate a maintenance mode checkbox in your rails app application for
+      convenience.
+
+  Final notes:
+    You will be able to access the website with the get parameter 
+    maintenance_mode_override=1 even if the maintenance mode is active. This is
+    an option for administrators, who want to test the side before turning off
+    the maintenance mode.
+
+Example:
+  rails generate maintenance_mode:install
+
+  This will create following files in your rails app:
+    - db/migrations/..._create_app_config.rb
+    - public/maintenance.html

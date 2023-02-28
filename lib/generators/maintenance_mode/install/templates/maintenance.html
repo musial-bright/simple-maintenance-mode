@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="alfred">
+  <head>
+    <title>Maintenance</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;"/>
+
+    <style>
+      /*default*/
+      body, html {background:#f2f2f2; font-family: arial, sans-serif; font-size:18px; margin:0; padding:0;}
+      .wrapper {text-align:center; margin:70px auto 0 auto; color:#999; width:50%;}
+      .link a+a {margin-left:5px;}
+      .btn {background:#aaa; border:solid 1px #fff; color:#fff; display:inline-block; font-size:14px; text-decoration:none; margin-top:5px; padding:8px 12px; border-radius:4px;}
+      .btn:hover {background:#999; box-shadow:0 10px 10px rgba(0, 0, 0, 0.2);}
+      .bg {
+        padding:10px 0;
+        background: -moz-linear-gradient(left, #f2f2f2 0%, #f9f9f9 50%, #f2f2f2 100%);
+        background: -webkit-linear-gradient(left, #f2f2f2 0%, #f9f9f9 50%, #f2f2f2 100%);
+        background: -ms-linear-gradient(left, #f2f2f2 0%, #f9f9f9 50%, #f2f2f2 100%);
+        background: linear-gradient(left, #f2f2f2 0%, #f9f9f9 50%, #f2f2f2 100%);
+      }
+      h1 {color:#e5e5e5; font-size:90px; font-weight:bold; text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(255, 255, 255, 0.8); margin:50px 0 0 0; padding:0;}
+      p {padding:10px 0; margin:0; letter-spacing:1px; line-height:25px;}
+      strong {white-space: nowrap;}
+      hr {background:none; box-shadow:none; border:none; border-top:solid 1px #ddd; border-bottom:solid 1px #fff; margin:0; padding:0;}
+
+      /*for alfred*/
+      html.alfred, .alfred body {background:#E3E0D8;}
+      .alfred .wrapper {color:#777;}
+      .alfred h1  {color:#cfccc5;}
+      .alfred hr {background:none; box-shadow:none; border:none; border-top:solid 1px #ccc; border-bottom:solid 1px #fff; margin:0; padding:0;}
+      .alfred .btn {background:#E79800;}
+      .alfred .bg {
+        padding:10px 0;
+        background: -moz-linear-gradient(left, #E3E0D8 0%, #ece9e1 50%, #E3E0D8 100%);
+        background: -webkit-linear-gradient(left, #E3E0D8 0%, #ece9e1 50%, #E3E0D8 100%);
+        background: -ms-linear-gradient(left, #E3E0D8 0%, #ece9e1 50%, #E3E0D8 100%);
+        background: linear-gradient(left, #E3E0D8 0%, #ece9e1 50%, #E3E0D8 100%);
+      }
+
+      @-webkit-keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(-30px);
+        }
+
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+        }
+      }
+
+      @-moz-keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          -moz-transform: translateY(-30px);
+        }
+
+        100% {
+          opacity: 1;
+          -moz-transform: translateY(0);
+        }
+      }
+
+      @-ms-keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          -ms-transform: translateY(-30px);
+        }
+
+        100% {
+          opacity: 1;
+          -ms-transform: translateY(0);
+        }
+      }
+
+      @-o-keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          -ms-transform: translateY(-30px);
+        }
+
+        100% {
+          opacity: 1;
+          -ms-transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animation{
+        -webkit-transition: all 0.1s linear;
+        -o-transition: all 0.1s linear;
+        -moz-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+        -kthtml-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+        transition-delay:0.0s;
+      }
+      .animated {
+        -webkit-animation: 1s ease;
+        -moz-animation: 1s ease;
+        -ms-animation: 1s ease;
+        -o-animation: 1s ease;
+        animation: 1s ease;
+      }
+      .fadeInDown {
+        -webkit-animation-name: fadeInDown;
+        -moz-animation-name: fadeInDown;
+        -ms-animation-name: fadeInDown;
+        -o-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+      }
+      @media (max-width: 800px) {
+        h1 {font-size:40px;}
+      }
+
+    </style>
+
+  </head>
+
+  <body class="animated fadeInDown">
+
+    <div class="wrapper">
+      <h1>Maintenance</h1>
+      <hr />
+      <div class="bg">
+        <p>
+          The website is currently in maintenance.
+        </p>
+        <p>
+          Sorry for the inconvenience.
+        </p>
+        <p class="link">
+          <a href="your-website-url" title="website title" class="animation btn">Your Website URL</a>
+        </p>
+      </div>
+      <hr />
+    </div>
+
+  </body>
+</html>

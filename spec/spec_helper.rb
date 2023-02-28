@@ -1,0 +1,1 @@
+require 'maintenance_mode'
