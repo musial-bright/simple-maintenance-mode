@@ -1,1 +1,1 @@
-require 'maintenance_mode'
+require 'simple-maintenance-mode'

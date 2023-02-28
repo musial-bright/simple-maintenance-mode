@@ -1,4 +1,4 @@
-# Maintenance Mode
+# Simple Maintenance Mode
 
 A simple maintenance mode gem for rails apps. If you need a mode/page for
 maintenance purposes, this is a gem for you. It provides a simple maintenance
@@ -11,7 +11,7 @@ will be stored in a app settings model. Additionally each user will get a cookie
 when the mode is active and a redirection to the maintenance page will happen.
 
 To activate the maintenance mode simply run the rails console and do this:
-**MaintenanceMode::Model::AppSettings.maintenance_mode = true**
+**SimpleMaintenanceMode::Model::AppSettings.maintenance_mode = true**
 
 As a rails app administrator, you will be always able to access the page by using
 the **maintenance_mode_override=1** GET parameter.
@@ -21,23 +21,23 @@ the **maintenance_mode_override=1** GET parameter.
 
 Add this line to your application's Gemfile:
 
-    gem 'maintenance_mode'
+    gem 'simple-maintenance-mode'
 
 And then execute:
 
     $ bundle
-    $ rails g maintenance_mode:install
+    $ rails g simple_maintenance_mode:install
 
 Or install it yourself as:
 
-    $ gem install maintenance_mode
+    $ gem install simple-maintenance-mode
     
 ## Usage
 
 Put this in your Application Controller
 ````
 class ApplicationController <  ActionController::Base
-  include MaintenanceMode::Filter
+  include SimpleMaintenanceMode::Filter
   before_action :check_maintenance_mode
 end
 ````
@@ -45,9 +45,9 @@ end
 You can get/set the maintenance mode with the following method
 ````
 # get current maintenance mode
-MaintenanceMode::Model::AppSettings.maintenance_mode
+SimpleMaintenanceMode::Model::AppSettings.maintenance_mode
 # will return true|false
 
 # set maintenance mode
-MaintenanceMode::Model::AppSettings.maintenance_mode = true|false
+SimpleMaintenanceMode::Model::AppSettings.maintenance_mode = true|false
 ````

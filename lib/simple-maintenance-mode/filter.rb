@@ -1,4 +1,4 @@
-module MaintenanceMode
+module SimpleMaintenanceMode
   module Filter
     
     def check_maintenance_mode(override = false)
@@ -20,7 +20,7 @@ module MaintenanceMode
     end
     
     def app_settings
-      @app_settings ||= MaintenanceMode::Model::AppSettings.instance
+      @app_settings ||= SimpleMaintenanceMode::Model::AppSettings.instance
     end
   end
 end

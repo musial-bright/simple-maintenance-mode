@@ -1,5 +1,5 @@
 Description:
-  Install maintenance mode for your applications.
+  Install simple maintenance mode for your applications.
   The installation will copy migrations and pages into your migrations/public
   rails app folder.
 
@@ -15,7 +15,7 @@ Description:
     the maintenance mode.
 
 Example:
-  rails generate maintenance_mode:install
+  rails generate simple_maintenance_mode:install
 
   This will create following files in your rails app:
     - db/migrations/..._create_app_config.rb

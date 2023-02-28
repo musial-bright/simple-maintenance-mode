@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe 'MaintenanceMode::Filter' do
+describe 'SimpleMaintenanceMode::Filter' do
   
   let(:app_settings) do
-    double(MaintenanceMode::Model::AppSettings)
+    double(SimpleMaintenanceMode::Model::AppSettings)
   end
   
   let(:generic_controller) do
     class GenericController
-      include MaintenanceMode::Filter
+      include SimpleMaintenanceMode::Filter
       
       attr_accessor :cookies, :params
       
