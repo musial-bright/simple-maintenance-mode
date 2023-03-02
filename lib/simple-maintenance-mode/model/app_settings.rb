@@ -6,7 +6,9 @@ module SimpleMaintenanceMode
     class AppSettings < ActiveRecord::Base
       
       acts_as_singleton
-      
+
+      store :content, accessors: [ :maintenance_message ], coder: JSON
+
       def self.maintenance_mode=(active=false)
         app_settings = SimpleMaintenanceMode::Model::AppSettings.instance
         app_settings.maintenance_mode = active
